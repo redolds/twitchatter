@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "twit": {
+      "version": "http://registry.npmjs.org/twit/-/twit-1.1.19.tgz",
+      "dependencies": {
+        "oauth": {
+          "version": "http://registry.npmjs.org/oauth/-/oauth-0.9.9.tgz"
+        }
+      }
+    }
+  }
+}
