@@ -22,8 +22,8 @@ flemay:less-autoprefixer
 meteortoys:allthings
 accounts-ui
 accounts-password
-accounts-google
 accounts-github
+accounts-twitter
 spiderable
 aldeed:autoform
 aldeed:collection2
@@ -32,3 +32,5 @@ kadira:flow-router
 kadira:blaze-layout
 fortawesome:fontawesome
 erasaur:meteor-lodash
+
+mrt:twit
