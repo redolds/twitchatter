@@ -8,8 +8,10 @@ Template.DashboardSearch.events({
 			Meteor.call('searchTweets', term, function(err, result) {
 				if (err) {
 					console.log(err);
+					Session.set('loadingTweets', false)
 				}
 				if (result) {
+					console.log(result);
 					Session.set('tweetData', result);
 					Session.set('loadingTweets', false)
 				}

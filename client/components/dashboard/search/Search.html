@@ -4,9 +4,15 @@
 		<input type="text" placeholder="Search..." name="SearchTerm" id="searchTerm">
 		<i class="search icon"></i>
 	</div>
-	<div class="ui segment">
+
+	<div class="ui relaxed divided items">
+		<div class="ui header">
+			<!-- TODO: Fix image size & resolution for found tweets -->
+			<h3>Results for "{{tweetData.search_metadata.query}}"</h3>
+		</div>
 		{{#each tweetData.statuses}}
 		{{> tweet}}
 		{{/each}}
 	</div>
+
 </template>
