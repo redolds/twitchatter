@@ -1,0 +1,23 @@
+<template name="HomeLayout">
+	<div class="pusher">
+		<div class="full height">
+			<div class="following bar">
+				<div class="ui large menu">
+					<div class="ui container">
+						<a href="/" class="header item">Twicher</a>
+						<a href="/" class="item">Home</a>
+						<a href="/pricing" class="item">pricing</a>
+						<div class="right menu">
+							<a href="/login" class="item">Login</a>
+							<a href="/signup" class="item">Signup</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ui content">
+				{{> Template.dynamic template=main}}
+			</div>
+		</div>
+	</div>
+</template>
