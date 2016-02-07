@@ -20,8 +20,8 @@ semantic:ui
 semantic:ui-css
 flemay:less-autoprefixer
 meteortoys:allthings
-accounts-ui
 accounts-password
+iandouglas:accounts-ui-semantic-ui
 accounts-github
 accounts-twitter
 spiderable
@@ -35,6 +35,5 @@ erasaur:meteor-lodash
 
 mrt:twit
 meteorhacks:npm
-
 
 npm-container

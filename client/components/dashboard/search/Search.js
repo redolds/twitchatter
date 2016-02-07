@@ -1,7 +1,25 @@
 Template.DashboardSearch.events({
 	"click #btnSearchTweets": function(event, template){
-		 event.stopPropagation();
-		 event.preventDefault();
-		 console.log(event);
+		event.preventDefault();
+		var term = $('#searchTerm').val();
+
+		Meteor.call('searchTweets', term, function(err, result) {
+			console.log(err);
+			console.log(result);
+			if (err) {
+				console.log(err);
+			}
+			if (result) {
+				console.log(result);
+				Session.set('tweetData', result);
+			}
+		});
+		$('#searchTerm').val("");
+	}
+});
+
+Template.DashboardSearch.helpers({
+	tweetData: function(){
+		return Session.get('tweetData');
 	}
 });
