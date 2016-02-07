@@ -1,43 +1,52 @@
 <template name="MainLayout">
-	<div class="ui bottom attached segment">
-		<div class="ui inverted labeled left vertical sidebar menu visible">
-			<a class="item" href="/dashboard">
-				<i class="unhide icon"></i>
-				Overview
-			</a>
-			<a class="item" href="/dashboard/conversations">
-				<i class="chat icon"></i>
-				Conversations
-			</a>
-			<a class="item" href="/dashboard/mentions">
-				<i class="block layout icon"></i>
-				Mentions
-			</a>
-			<a class="item" href="/dashboard/followers">
-				<i class="smile icon"></i>
-				Followers
-			</a>
-			<a class="item" href="/dashboard/non-followers">
-				<i class="calendar icon"></i>
-				Non-Followers
-			</a>
-			<a class="item" href="/dashboard/analytics">
-				<i class="bar chart icon"></i>
-				Analytics
-			</a>
-			<a class="item" href="/dashboard/search">
-				<i class="search icon"></i>
-				Search
-			</a>
-		</div>
+	<div class="full height">
+		<div class="ui bottom attached segment">
+			<div class="ui large labeled icon left vertical menu visible sidebar thin">
+				<a href="/dashboard" class="item">
+					<h4 class="ui header center aligned">
+						{{LoggedInUser}}
+					</h4>
+				</a>
+				<a class="item" href="/dashboard">
+					<i class="unhide icon"></i>
+					Overview
+				</a>
+				<a class="item" href="/dashboard/conversations">
+					<i class="chat icon"></i>
+					Conversations
+				</a>
+				<a class="item" href="/dashboard/mentions">
+					<i class="block layout icon"></i>
+					Mentions
+				</a>
+				<a class="item" href="/dashboard/followers">
+					<i class="smile icon"></i>
+					Followers
+				</a>
+				<a class="item" href="/dashboard/non-followers">
+					<i class="calendar icon"></i>
+					Non-Followers
+				</a>
+				<a class="item" href="/dashboard/analytics">
+					<i class="bar chart icon"></i>
+					Analytics
+				</a>
+				<a class="item" href="/dashboard/search">
+					<i class="search icon"></i>
+					Search
+				</a>
+			</div>
 
-		<div class="pusher">
-			<div class="ui basic segment">
-				<h2 class="ui header">Dashboard</h2>
-				<div class="divider"></div>
-				<div class="ui piled segment">
-					<div class="ui content">
-						{{> Template.dynamic template=main}}
+			<div class="pusher">
+				<div class="article">
+					<div class="ui basic segment">
+						<h2 class="ui header">Dashboard</h2>
+						<div class="divider"></div>
+						<div class="ui piled segment">
+							<div class="ui content">
+								{{> Template.dynamic template=main}}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
