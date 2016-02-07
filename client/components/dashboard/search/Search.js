@@ -4,8 +4,6 @@ Template.DashboardSearch.events({
 		var term = $('#searchTerm').val();
 
 		Meteor.call('searchTweets', term, function(err, result) {
-			console.log(err);
-			console.log(result);
 			if (err) {
 				console.log(err);
 			}

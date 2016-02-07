@@ -5,7 +5,6 @@ Meteor.methods({
 				done(null, data);
 			});
 		});
-		console.log(tweets);
 		return tweets.result;
 	}
 });

@@ -4,7 +4,9 @@
 		<input type="text" placeholder="Search Term" name="SearchTerm" id="searchTerm">
 		<div class="ui button" id="btnSearchTweets">Search</div>
 	</div>
-	<div class="tweets">
-		{{tweetData}}
+	<div class="ui segment">
+		{{#each tweetData.statuses}}
+			{{> tweet}}
+		{{/each}}
 	</div>
 </template>
