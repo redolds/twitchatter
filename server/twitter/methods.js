@@ -1,8 +1,11 @@
 Meteor.methods({
 	searchTweets:function(term){
-		T.get('search/tweets', { q: term, count: 2 }, function(err, data, response) {
-			console.log(data);
-			return data;
-		})
+		var tweets = Async.runSync(function(done) {
+			T.get('search/tweets', { q: term, count: 2 }, function(err, data) {
+				done(null, data);
+			});
+		});
+		console.log(tweets);
+		return tweets.result;
 	}
 });

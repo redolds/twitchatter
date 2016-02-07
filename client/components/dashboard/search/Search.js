@@ -10,7 +10,6 @@ Template.DashboardSearch.events({
 				console.log(err);
 			}
 			if (result) {
-				console.log(result);
 				Session.set('tweetData', result);
 			}
 		});
