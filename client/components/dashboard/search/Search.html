@@ -1,12 +1,12 @@
 <template name="DashboardSearch">
 	<h3>Search Tweets</h3>
-	<div class="ui action input">
-		<input type="text" placeholder="Search Term" name="SearchTerm" id="searchTerm">
-		<div class="ui button" id="btnSearchTweets">Search</div>
+	<div class="ui icon input {{isLoading}}">
+		<input type="text" placeholder="Search..." name="SearchTerm" id="searchTerm">
+		<i class="search icon"></i>
 	</div>
 	<div class="ui segment">
 		{{#each tweetData.statuses}}
-			{{> tweet}}
+		{{> tweet}}
 		{{/each}}
 	</div>
 </template>
