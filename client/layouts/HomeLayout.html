@@ -1,7 +1,16 @@
 <template name="HomeLayout">
-	<header>
-		<h1>this is the home layout</h1>
-	</header>
+	<div class="ui container">
+		<div class="ui menu">
+			<a href="/" class="header item">Twicher</a>
+			<a href="/" class="item">Home</a>
+			<a href="/pricing" class="item">pricing</a>
+			<a href="/login" class="item">Login</a>
+			<a href="/signup" class="item">Singup</a>
+		</div>
+	</div>
 
-	{{> loginButtons}}
+	<div class="ui content">
+		{{> Template.dynamic template=main}}
+	</div>
+
 </template>
